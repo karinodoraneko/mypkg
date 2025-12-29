@@ -6,14 +6,14 @@ import launch_ros.actions
 
 def generate_launch_description():
 
-    talker = launch_ros.actions.Node(
+    timer_pub = launch_ros.actions.Node(
         package='mypkg',
-        executable='talker',
+        executable='timer_pub',
         )
-    listener = launch_ros.actions.Node(
+    time_sub = launch_ros.actions.Node(
         package='mypkg',
-        executable='listener',
+        executable='time_sub',
         output='screen'
         )
 
-    return launch.LaunchDescription([talker, listener])
+    return launch.LaunchDescription([timer_pub, time_sub])
