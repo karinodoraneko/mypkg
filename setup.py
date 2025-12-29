@@ -1,4 +1,4 @@
-from setuptools import find_packages, setup
+from setuptools import setup
 import os
 from glob import glob
 
@@ -7,7 +7,7 @@ package_name = 'ros2_timer'
 setup(
     name=package_name,
     version='0.0.0',
-    packages=find_packages(exclude=['test']),
+    packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -20,11 +20,7 @@ setup(
     maintainer_email='karinodoraneko@gmail.com',
     description='A simple timer package for ros2',
     license='BSD-3-Clause',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'timer_pub = ros2_timer.timer_pub:main',
