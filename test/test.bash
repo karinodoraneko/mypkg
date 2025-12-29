@@ -7,6 +7,7 @@ dir=~
 
 cd $dir/ros2_ws
 colcon build
+source /opt/ros/humble/setup.bash
 source install/setup.bash
 
 timeout 15 ros2 launch ros2_timer talk_listen.launch.py > /tmp/ros2_timer.log
