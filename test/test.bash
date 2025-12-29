@@ -1,12 +1,15 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2025 Yuto Matsushima
+# SPDX-License-Identifier: BSD-3-Clause
 
 dir=~
 [ "$1" != "" ] && dir="$1"
 
 cd $dir/ros2_ws
 colcon build
-source $dir/.bashrc
-timeout 10 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
+source install/setup.bash
 
-cat /tmp/mypkg.log |
-grep 'Listen: 10'
+timeout 15 ros2 launch ros2_timer talk_listen.launch.py > /tmp/ros2_timer.log
+
+cat /tmp/ros2_timer.log |
+grep 'TIME UP!!'
