@@ -18,7 +18,7 @@ setup(
     zip_safe=True,
     maintainer='Yuto Matsushima',
     maintainer_email='karinodoraneko@gmail.com',
-    description='a package for practice',
+    description='A simple timer package for ros2',
     license='BSD-3-Clause',
     extras_require={
         'test': [
@@ -27,8 +27,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'talker = mypkg.talker:main',
-            'listener = mypkg.listener:main',
+            'timer_pub = ros2_timer.timer_pub:main',
+            'time_sub = ros2_timer.time_sub:main',
         ],
     },
 )
