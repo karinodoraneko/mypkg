@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 import os
 from glob import glob
 
-package_name = 'mypkg'
+package_name = 'ros2_timer'
 
 setup(
     name=package_name,
