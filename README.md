@@ -10,7 +10,7 @@ ROS2を用いて、ロボットなど機械のバッテリー残量の変化と�
 ## 使い方
 ### 実行方法
 ```
-$ ros2 launch mypkg talk_listen.launch.py
+$ ros2 launch mypkg battery_check.launch.py
 ```
 
 ### 出力例
