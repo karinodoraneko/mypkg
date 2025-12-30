@@ -1,6 +1,6 @@
 # battery-simulationコマンド
 
-![test](https://github.com/karinodoraneko/robosys2025/actions/workflows/test.yml/badge.svg)
+![test](https://github.com/karinodoraneko/mypkg/actions/workflows/test.yml/badge.svg)
 
 ROS2を用いて、ロボットなど機械のバッテリー残量の変化と、残量低下時の警告アラートをシミュレートするパッケージです。
 
