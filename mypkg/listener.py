@@ -1,17 +1,26 @@
+# SPDX-FileCopyrightText: 2025 Yuto Matsushima
+# SPDX-License-Identifier: BSD-3-Clause
+
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int16
 
+class Listener(Node):
+    def __init__(self):
+        super().__init__('listener')
+        self.pub = self.create_subscription(Int16, 'battery_level', self.cb, 10)
 
-rclpy.init()
-node = Node("listener")
-
-
-def cb(msg):
-    global node
-    node.get_logger().info("Listen: %d" % msg.data)
-
+    def cb(self, msg):
+        if msg.data < 30:
+            self.get_logger().warn(f'Low Battery! Level: {msg.data}%')
+        else:
+            self.get_logger().info(f'Battery Level: {msg.data}%')
 
 def main():
-    pub = node.create_subscription(Int16, "countup", cb, 10)
-    rclpy.spin(node)
+    rclpy.init()
+    node = Listener()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    rclpy.shutdown()
