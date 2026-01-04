@@ -1,4 +1,4 @@
-# battery-simulationコマンド
+# battery simulation
 
 ![test](https://github.com/karinodoraneko/mypkg/actions/workflows/test.yml/badge.svg)
 
@@ -37,4 +37,4 @@ $ ros2 launch mypkg battery_check.launch.py
 
 ## 謝辞
 - 参考文献
-  - [ryuichiueda/my_slides robosys_2025](https://github.com/ryuichiueda/my_slides/tree/master/robosys_2025)
+  - [ryuichiueda/slides_marp/robosys2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
