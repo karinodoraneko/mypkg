@@ -1,4 +1,5 @@
-# battery simulation
+# mypkg
+## battery simulation
 
 ![test](https://github.com/karinodoraneko/mypkg/actions/workflows/test.yml/badge.svg)
 
@@ -44,7 +45,7 @@ $ ros2 launch mypkg battery_check.launch.py
 ```
 
 ## 動作環境
-- Ubuntu 24.04 LTS
+- Ubuntu 22.04 LTS
 
 ## ライセンス
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．
